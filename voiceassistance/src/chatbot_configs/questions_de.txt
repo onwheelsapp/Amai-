@@ -1,0 +1,34 @@
+name : Wie lautet der Name des Standorts, den Sie hinzufügen möchten?
+type_food : Welche Lebensmittel werden hier verkauft? Wählen Sie aus den Optionen: Afrikanisch, Asiatisch, Dessertbäckerei, Belgische Pommes, Mediterran, Nahöstlich oder Westlich?
+vegan : Bietet das Restaurant vegane Optionen an?
+vegatarian : Bietet das Restaurant vegetarische Optionen an?
+shop_info : 
+parking_spot_info :
+other_info :
+email : 
+street : In welcher Straße liegt dieser Ort?
+number : Wie lautet die Straßennummer dieses Ortes?
+postal_code : Wie lautet die Postleitzahl dieses Ortes?
+city : In welcher Stadt liegt der Ort?
+country : In welchem ​​Land liegt der Ort?
+website : 
+entrance_door_width : Wie breit ist die Eingangstür?
+amount_of_steps : Wie viele Stufen gibt es am Eingang des Gebäudes?
+total_height_of_the_steps : Wie groß ist die Gesamthöhe der Stufen in Zentimetern?
+access_ramp : Gibt es Zugang zu einer Rampe, um über die Stufen zu gelangen?
+turning_point : Gibt es genügend Platz, um sich mit einem Rollstuhl umzudrehen?
+toilet_present : Ist am Standort eine Toilette vorhanden?
+situation_of_toilet : Handelt es sich um eine Standardtoilette oder eine angepasste Toilette für Rollstuhlfahrer?
+lift_door_width : Wie breit ist die Tür des Aufzugs?
+lift_width : Wie breit ist der Aufzug im Inneren?
+lift_depth : Wie tief ist der Aufzug im Inneren?
+ground_floor_info : 
+stairs_info : 
+width_narrowest_point_from_entrance_to_toilet: Wie breit ist die engste Stelle vom Eingang zur Toilette?
+toilet_door_width: Wie breit ist die Tür der Toilette?
+number_of_handrails : Wie viele Handläufe gibt es in der Toilette?
+free_space_infront_toilet : Wie viel Freiraum gibt es vor der Toilette?
+free_space_next_toilet : Wie viel freier Platz gibt es neben der Toilette?
+pay_toilet : Ist die Toilette kostenlos oder muss man bezahlen?
+baby_changing_table : Ist in der Toilette ein Wickeltisch vorhanden?
+adult_changing_table: Gibt es in der Toilette einen Wickeltisch für Erwachsene?

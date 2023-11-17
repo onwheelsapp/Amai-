@@ -1,0 +1,34 @@
+name : Quel est le nom du lieu que vous souhaitez ajouter ?
+type_food : Quelle nourriture qu'ils vendent ici. Choisissez parmi les options : Africain, Asiatique, Dessert Boulangerie, Frites Belges, Méditerranéen, Moyen-Oriental ou Occidental ?
+vegan : Le restaurant propose-t-il des options végétaliennes ?
+vegatarian : Le restaurant propose-t-il des plats végétariens ?
+shop_info : 
+parking_spot_info :
+other_info :
+email : 
+street : Dans quelle rue ce lieu est-il situé ?
+number : Quel est le numéro de rue de ce lieu ?
+postal_code : Quel est le code postal de ce lieu ?
+city : Dans quelle ville se situe le lieu ?
+country : Dans quel pays se situe le lieu ?
+website : 
+entrance_door_width : Quelle est la largeur de l'entrée ?
+amount_of_steps : Combien y a-t-il de marches à l'entrée du bâtiment ?
+total_height_of_the_steps : Quelle est la hauteur totale des marches en centimètres ?
+access_ramp : Y a-t-il accès à une rampe pour franchir les marches ?
+turning_point : Y a-t-il assez d'espace pour faire demi-tour avec un fauteuil roulant ?
+toilet_present : Y a-t-il des toilettes présentes à l'emplacement ?
+situation_of_toilet : S'agit-il d'une toilette standard ou d'une toilette adaptée pour les personnes en fauteuil roulant ?
+lift_door_width : Quelle est la largeur de la porte de l'ascenseur ?
+lift_width : Quelle est la largeur de l'ascenseur à l'intérieur ?
+lift_depth : Quelle est la profondeur de l'ascenseur à l'intérieur ?
+ground_floor_info : 
+stairs_info : 
+width_narrowest_point_from_entrance_to_toilet: quelle est la largeur du point le plus étroit entre l'entrée des toilettes ?
+toilet_door_width: Quelle est la largeur de la porte des toilettes ?
+number_of_handrails : Combien de mains courantes y a-t-il à l'intérieur des toilettes ?
+free_space_infront_toilet : Combien d'espace libre y a-t-il devant les toilettes ?
+free_space_next_toilet : Combien d'espace libre y a-t-il à côté des toilettes ?
+pay_toilet : Les toilettes sont-elles gratuites ou payantes ?
+baby_changing_table : Y a-t-il une table à langer présente dans les toilettes ?
+adult_changing_table: Y a-t-il une table à langer pour adulte dans les toilettes ?

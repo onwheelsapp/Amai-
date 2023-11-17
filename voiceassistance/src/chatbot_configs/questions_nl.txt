@@ -1,0 +1,34 @@
+name : Wat is de naam van de locatie?
+type_food : Welk soort eten verkopen ze hier? Kies uit de volgende opties: Afrikaans, Aziatisch, dessert bakkerij, Belgische frituur, Mediteraans, Midden Oosten of Westers?
+vegan : Zijn er vegan opties?
+vegatarian : Zijn er vegetarische opties?
+shop_info : 
+parking_spot_info :
+other_info :
+email : 
+street : In welke straat bevindt het zich?
+number : Wat is het straat nummer van de locatie?
+postal_code : Wat is de postcode?
+city : In welke stad bevindt de locatie zich?
+country : In welk land bevindt de locatie zich?
+website : 
+entrance_door_width : Hoe breed is de deur van de ingang?
+amount_of_steps : Hoeveel treden zijn er bij de ingang?
+total_height_of_the_steps : Wat is de totale hoogte van deze trappen in centimeters?
+access_ramp : Is er een helling voor rolstoelgebruikers?
+turning_point : Is er genoeg ruimte om je te kunnen draaien met een rolstoel?
+toilet_present : Is er een toilet?
+situation_of_toilet : Is het een standaard toilet of een gehandicapten toilet?
+lift_door_width : Hoe breed is de deur van de lift?
+lift_width : Hoe breed is de lift langs de binnenkant?
+lift_depth : Hoe diep is de lift langs de binnenkant?
+ground_floor_info : 
+stairs_info : 
+width_narrowest_point_from_entrance_to_toilet: Hoe breed is de smalste doorgang op de weg naar het toilet?
+toilet_door_width: Hoe breed is de deur van het toilet?
+number_of_handrails : Hoeveel leuningen zijn er in het toilet?
+free_space_infront_toilet : Hoeveel plek is er voor het toilet in centimeters?
+free_space_next_toilet : Hoeveel plek is er naast het toilet in centimeters?
+pay_toilet : Is het toilet gratis of moet men betalen?
+baby_changing_table : Is er een babycommode?
+adult_changing_table: Is er een volwassen commode?

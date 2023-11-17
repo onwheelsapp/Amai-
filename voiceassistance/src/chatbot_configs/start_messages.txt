@@ -1,0 +1,4 @@
+en: Hi, welcome! Please give me some information about the location you want to add. This can be information about the function of the location, the address, the entrance or the toilet.
+nl: Hallo, welkom! Gelieve me wat informatie te geven over de locatie die je wilt toevoegen. Dit kan informatie zijn over de functie van de locatie, het adres, de entree of het toilet.
+fr: Salut, bienvenue! Veuillez me donner des informations sur l'emplacement que vous souhaitez ajouter. Il peut s'agir d'informations sur la fonction du lieu, l'adresse, l'entrée ou les toilettes.
+de: Hallo, willkommen! Bitte geben Sie mir einige Informationen über den Standort, den Sie hinzufügen möchten. Dabei kann es sich um Informationen über die Funktion des Standortes, der Adresse, des Eingang oder der Toilette handeln.

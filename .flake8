@@ -1,0 +1,7 @@
+[flake8]
+exclude = 
+    .git,
+    __pycache__,
+    *venv
+max-line-length = 88
+ignore = D202,W503,E203,S101,S108,S104,B008,S113,S310,S404,S603

@@ -1,0 +1,23 @@
+version : "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ../data/models/CVmodels:/app/models
+    container_name: autoblurring_back
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    ports:
+      - 7860:7860
+    volumes:
+      - ./examples:/app/examples
+      - ../data/models/CVmodels:/app/models
+    container_name: autoblurring_front

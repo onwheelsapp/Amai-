@@ -1,0 +1,19 @@
+name: minimal
+channels:
+- anaconda
+- conda-forge
+dependencies:
+- python=3.8.13
+- pip=22.1.2
+- pip:
+  - azureml-inference-server-http~=0.7.0
+  - certifi==2022.12.07
+  - setuptools==65.5.1
+  - wheel==0.38.1
+  - TTS==0.13.3
+  - azureml-defaults==1.47.0
+  - joblib==1.0.1
+  - openai-whisper==20230314
+  - openai==0.27.6
+  - flatdict==4.0.1
+  - git+https://github.com/sophieDataroots/guardrails.git

@@ -1,0 +1,4 @@
+en: Can you please repeat what you said? I didn't understand you.
+nl: Zou u kunnen herhalen wat u zei? Ik heb u niet kunnen verstaan.
+fr: Pourriez-vous répéter ce que vous avez dit? Je ne pouvais pas te comprendre.
+de: Könnten Sie wiederholen, was Sie gesagt haben? Ich konnte dich nicht verstehen.

@@ -1,0 +1,71 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black-jupyter
+        args: ["--line-length", "88"]
+        files: (autoblurring/notebooks/|voiceassistance/notebooks/)
+
+  - repo: https://github.com/datarootsio/databooks
+    rev: 1.0.5
+    hooks:
+      - id: databooks-meta
+        name: databooks-meta
+        description: Remove Jupyter Notebook metadata
+        entry: databooks meta --overwrite
+        language: python
+        files: (autoblurring/notebooks/|voiceassistance/notebooks/)
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: ["--profile", "black", "--filter-files"]
+        files: (autoblurring/|voiceassistance/|testday/)
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.931
+    hooks:
+      - id: mypy
+        args: ["--disallow-untyped-defs", "--disallow-incomplete-defs", "--disallow-untyped-calls", "--ignore-missing-imports"]
+        files: testday/
+        additional_dependencies: ['types-requests']
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.931
+    hooks:
+      - id: mypy
+        args: ["--disallow-untyped-defs", "--disallow-incomplete-defs", "--disallow-untyped-calls", "--ignore-missing-imports"]
+        files: autoblurring/
+        additional_dependencies: ['types-requests']
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.931
+    hooks:
+      - id: mypy
+        args: ["--disallow-untyped-defs", "--disallow-incomplete-defs", "--disallow-untyped-calls", "--ignore-missing-imports"]
+        files: voiceassistance/
+        additional_dependencies: ['types-requests']
+
+  - repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.5
+    hooks:
+      - id: docformatter
+        args: ["--in-place","--wrap-descriptions", "88","--wrap-summaries","88"]
+        files: (autoblurring/|voiceassistance/|testday/)
+  
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        args: ["--line-length", "88"]
+        files: (autoblurring/|voiceassistance/|testday/)
+  
+  - repo: https://github.com/pycqa/flake8
+    rev: 5.0.4
+    hooks:
+      - id: flake8
+        additional_dependencies: ["flake8-bandit", "flake8-bugbear"]
+        files: (autoblurring/|voiceassistance/|testday/)
+
+  

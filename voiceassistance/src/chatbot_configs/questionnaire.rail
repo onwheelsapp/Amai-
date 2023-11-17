@@ -1,0 +1,175 @@
+<rail version="0.1">
+
+<output>
+    <object name="location_info">
+        <string name="name" description="Location's name"/>
+        <choice 
+            name="category"
+            description = "The function of the location. This can be a 'restaurant', 'shop', 'parking_spot' or 'other'."
+            format="valid-choices: {['restaurant', 'shop', 'parking_spot','other']}"
+            on-fail="fix">
+            <case name="restaurant">
+                <object name="restuarant_info">
+                    <string 
+                        name="type_food"
+                        description = "Which type of food do they serve here. Fit the answer in one of the following options: 'African', 'Asian', 'Dessert_Bakery', 'Friture', 'Mediterranean', 'Middle_Eastern', 'Western'."
+                        format="valid-choices: {['African', 'Asian', 'Dessert_Bakery', 'Friture', 'Mediterranean', 'Middle_Eastern', 'Western']}"
+                        on-fail="fix"
+                        />
+                    <bool 
+                        name="vegan" 
+                        description="if the restuarant is vegan or not" 
+                        />
+                    <bool 
+                        name="vegatarian" 
+                        description="if the restuarant is vegatarian or not" 
+                        />
+                </object>
+            </case>
+            <case name="shop">
+                <object name="shop_info"  ></object>
+            </case>
+            <case name="parking_spot">
+                <object name="parking_spot_info"  ></object>
+            </case>
+            <case name="other">
+                <object name="other_info"  ></object>
+            </case>
+        </choice>
+        <email name="email" description="the email address of the location"/>
+        <object name="address">
+            <string name="street" description="the streetname of the location"  />
+            <integer name="number" description="the streetnumber of the location"  />
+            <integer name="postal_code" description="the postal code of the location"  />
+            <string name="city" description="the city in which the building is located"  />
+            <string name="country" description="the country in which the building is located"  />
+        </object>
+        <url name="website" description="an url leading to the website of the location" />
+        <integer name="entrance_door_width" description="the width of the door in centimeters"/>
+        <object name="steps">
+            <integer 
+                name="amount_of_steps" 
+                description="the amount of steps at the entrance"  />
+            <integer 
+                name="total_height_of_the_steps" 
+                description="the total height of the steps in centimeters" 
+                if="amount_of_steps!=0 and amount_of_steps!=None"  />
+            <bool 
+                name="access_ramp" 
+                description="Is there access to a ramp to go over the steps at the entrance." 
+                if="amount_of_steps!=0 and amount_of_steps!=None"  />
+        </object>
+        <bool 
+            name="turning_point" 
+            description="Is there enough space to turn around with a wheelchair."/> 
+        <object name="toilet">
+            <bool 
+                name="toilet_present" 
+                description="Is there a toilet present at the location"
+                />
+            <string 
+                name="situation_of_toilet"
+                description="Is the toilet accesible for wheelschair users or is it a standard toilet"
+                if="toilet_present==True"
+                format="valid-choices: {['Accesible', 'Standard']}"
+                on-fail="filter"
+                />
+            <choice 
+                name="location_of_the_toilet"
+                if="toilet_present==True"
+                description="How the toilet can be reached, with stairs, a lift or is it on the ground floor."
+                format="valid-choices: {['lift', 'ground floor','stairs']}"
+                on-fail="fix">
+                <case name="lift">
+                    <object name="lift_info">
+                        <integer 
+                            name="lift_door_width"
+                            description = "The width of the door of the elevator in centimeters"
+                            />
+                        <integer 
+                            name="lift_width" 
+                            description="The width of the elevator on the inside"
+                            />
+                        <integer 
+                            name="lift_depth" 
+                            description="The depth of the elevator on the inside"
+                            />
+                    </object>
+                </case>
+                <case name="ground floor">
+                    <object name="ground_floor_info"></object>
+                </case>
+                <case name="stairs">
+                    <object name="stairs_info"></object>
+                </case>
+            </choice>
+            <integer 
+                name="width_narrowest_point_from_entrance_to_toilet"
+                if="toilet_present==True"
+                description="the width of the narrowest point from the entrance to the toilet in centimeters"
+                />
+            <integer 
+                name="toilet_door_width"
+                if="toilet_present==True"
+                description="the width of the door of the toilet in centimeters"
+                />
+            <integer 
+                name="number_of_handrails"
+                if="toilet_present==True"
+                description="amount of handrails available in the toilet"
+                />
+            <integer 
+                name="free_space_infront_toilet"
+                if="toilet_present==True"
+                description="amount of space in centimeters in front of the toilet"
+                />
+            <integer 
+                name="free_space_next_toilet"
+                if="toilet_present==True"
+                description="amount of space in centimeters next to the toilet"
+                />
+            <bool 
+                name="pay_toilet"
+                if="toilet_present==True"
+                description="Do you have to pay to use the toilet?"
+                on-fail="filter"
+                />
+            <bool 
+                name="baby_changing_table"
+                if="toilet_present==True"
+                description="if there is a baby changing table present in the toilet"
+                />
+            <bool 
+                name="adult_changing_table"
+                if="toilet_present==True"
+                description="if there is a adult changing table present in the toilet"
+                />
+        </object>
+    </object>
+</output>  
+
+<instructions>
+You are a helpful assistant only capable of communicating with one valid JSON, and no other text. 
+You are always very concise: If the user does not mention a variable, you set it to Null.
+You will NOT invent information yourself.
+@json_suffix_prompt_v2
+</instructions>
+
+<prompt>
+
+Given the following information about a location, please construct a JSON that follows the correct schema.
+The input from the user is: "{{user_input}}".
+
+If the answer to a variable doesn't exist in the user input, enter Null. This applies to integers, booleans and strings.
+Only set a boolean to True or False if the user explicitly mentioned the variable, otherwise set it to Null.
+Please extract a JSON that contains all the location's information. Be sure to follow the schema, its variable types and constraints.
+
+@json_suffix_prompt_v2
+
+{output_schema}
+
+The following variables are already given:
+{{memory}}
+If the user mentiones a variable that is already given here, choose the new input from the user.
+</prompt>
+</rail>

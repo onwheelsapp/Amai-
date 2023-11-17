@@ -1,0 +1,3 @@
+[submodule "testday"]
+	path = testday
+	url = ../onwheels_testday

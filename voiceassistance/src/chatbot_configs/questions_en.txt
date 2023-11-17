@@ -1,0 +1,34 @@
+name : What is the name of the location you want to add?
+type_food : What is the type of food that they sell here. Choose from the options: African, Asian, Dessert Bakery, Belgian fries, Mediterranean, Middle Eastern or Western?
+vegan : Does the restaurant have vegan options?
+vegatarian : Does the restaurant have vegetarian options?
+shop_info : 
+parking_spot_info :
+other_info :
+email : 
+street : On which street is this place located?
+number : What is the street number of this place?
+postal_code : What is the postal code of this place?
+city : In which city is the place located?
+country : In which country is the place located?
+website :
+entrance_door_width : How wide is the entrance door?
+amount_of_steps : How many steps are there at the entrance of the building?
+total_height_of_the_steps : What is the total heigh of the steps in centimeters?
+access_ramp : Is there access to a ramp to go over the steps?
+turning_point : Is there enough space to turn around with a wheelchair?
+toilet_present : Is there a toilet present at the location?
+situation_of_toilet : Is it a standard toilet or an adapted toilet for wheelchair users?
+lift_door_width : How wide is the door of the elevator?
+lift_width : How wide is the elevator on the inside?
+lift_depth : How deep is the elevator on the inside?
+ground_floor_info : 
+stairs_info : 
+width_narrowest_point_from_entrance_to_toilet: How wide is the narrowest point from the entrance to the toilet?
+toilet_door_width: How wide is the door of the toilet?
+number_of_handrails : How many handrails are there inside the toilet?
+free_space_infront_toilet : How much free space is there in front of the toilet?
+free_space_next_toilet : How much free space is there next to the toilet?
+pay_toilet : Is the toilet free or do you have to pay?
+baby_changing_table : Is there a baby changing table present in the toilet?
+adult_changing_table: Is there an adult changing table present in the toilet?

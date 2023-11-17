@@ -1,0 +1,27 @@
+version : "3.9"
+
+services:
+  backend:
+    env_file:
+      - ../.env
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ../data/models/NLPmodels:/app/models
+    container_name: voiceassistance_back
+
+  frontend:
+    env_file:
+      - ../.env
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    ports:
+      - 7860:7860
+    volumes:
+      - ../data/audio:/app/audio
+      - ../data/models/NLPmodels:/app/models
+    container_name: voiceassistance_front
